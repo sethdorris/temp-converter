@@ -4,15 +4,11 @@ function toCelsius (input) {
   return answer;
 }
 
-// console.log(toCelsius(45));
-
 function toFahrenheit (input) {
   var fahrenheit = (input * 9) / 5 + 32;
   var answer = Math.round(fahrenheit);
   return answer;
 }
-
-// console.log(toFahrenheit(45));
 
 // This function should determine which conversion should
 // happen based on which radio button is selected.
@@ -25,7 +21,7 @@ function determineConverter (e) {
   var input = document.getElementById("user-temp").value;
   var show = document.getElementById('showcase');
 
-  // for loop
+  // for loop to determine which radio button is checked and calling correct calc function
   for (var i = 0; i < optionChosen.length; i++) {
     if (optionChosen[i].checked && optionChosen[i].value === 'celsius') {
         toCelsius(input);
